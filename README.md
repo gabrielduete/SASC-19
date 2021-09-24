@@ -1,4 +1,4 @@
-<h1>Aplicação que mostra um site com as estatísticas referente ao COVID-19 de cada país da América do Sul, e estatísticas globais do COVID-19</h1>
+<h1>Aplicação que mostra um site com as estatísticas referente ao COVID-19 de cada país da América do Sul, e estatísticas globais do COVID-19(Ainda em desenvolvimento)</h1>
 
 # Getting Started with Create React App
 
