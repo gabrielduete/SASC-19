@@ -1,3 +1,5 @@
+<h1>Aplicação que mostra um site com as estatísticas referente ao COVID-19 de cada país da América do Sul, e estatísticas globais do COVID-19</h1>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
