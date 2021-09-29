@@ -1,13 +1,26 @@
 import React from 'react'
-import ApiMapa from './componentes/ApiMapa'
 import ApiCovid from './componentes/ApiCovid'
 import './App.css'
 
 function App(){
   return (
     <div className = 'container'>
-      <ApiMapa />
-      <ApiCovid />
+      
+      <div class="meuCabecalho">
+        <h1>cabecalho</h1>
+      </div>
+      
+      <div class="meuFooter">
+        <h2>Footer</h2>
+      </div>
+      
+      <div class="meuMapa">
+        <ApiCovid />
+      </div>
+      
+      <div class="minhasEstatisticas">
+        <h3>esta</h3>        
+      </div>
     </div>
   )
 }
