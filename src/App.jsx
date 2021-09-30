@@ -1,26 +1,32 @@
 import React from 'react'
+
 import ApiCovid from './componentes/ApiCovid'
-import './App.css'
+import Cabecalho from './componentes/Cabecalho'
+import Footer from './componentes/Footer'
+import Sgeral from './componentes/StatusGeral'
+
+import './css/App.css'
 
 function App(){
   return (
     <div className = 'container'>
       
-      <div class="meuCabecalho">
-        <h1>cabecalho</h1>
+      <div className="meuCabecalho">
+        <Cabecalho />
       </div>
       
-      <div class="meuFooter">
-        <h2>Footer</h2>
+      <div className="meuFooter">
+        <Footer />
       </div>
       
-      <div class="meuMapa">
+      <div className="meuMapa">
         <ApiCovid />
       </div>
       
-      <div class="minhasEstatisticas">
-        <h3>esta</h3>        
+      <div className="minhasEstatisticas">
+        <Sgeral />       
       </div>
+      
     </div>
   )
 }

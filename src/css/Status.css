@@ -1,0 +1,15 @@
+h2{
+    text-align: center;
+    color: #836FFF;
+}
+
+.ContainerCards{
+    /* background-color: red; */
+    width: 95%;
+}
+
+.card{
+    background-color: #836FFF;
+    width: 30%;
+    text-align: center;
+}

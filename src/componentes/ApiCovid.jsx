@@ -4,14 +4,6 @@ import ApiMapa from './ApiMapa'
 
 function ApiCovid(){
 
-    // const [arrays, setArrays] = useState({
-    //     'arrayCasos': [],
-    //     'arrayMortes': [],
-    //     'arrayMortesHoje': [],
-    //     'arrayRecuperados': [],
-    //     'arrayRecuperadosHoje': [],
-    // })
-
     const arrayCasos = []
     const arrayMortes = []
     const arrayMortesHoje = []
@@ -26,7 +18,7 @@ function ApiCovid(){
             arrayMortesHoje.push(casos.todayDeaths)
             arrayRecuperados.push(casos.recovered)
             arrayRecuperadosHoje.push(casos.todayRecovered)
-        }))   
+        }))
     
     return (
         <>
