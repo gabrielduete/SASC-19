@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import axios from 'axios'
+import React, { useState, useEffect } from "react"
 
 import '../css/Status.css'
 
@@ -14,23 +13,26 @@ function Geral(){
         'casosTotal': null,
     })
     
-    axios.get('https://disease.sh/v3/covid-19/all').then(
-        response => {
-            setStatus({
-                'casosHoje': response.data.todayCases,
-                'mortesHoje': response.data.todayDeaths,
-                'recuperadosHoje': response.data.todayRecovered,
-                'mortesTotal': response.data.deaths,
-                'recuperadosTotal': response.data.recovered,
-                'casosTotal': response.data.cases
+    useEffect(() => {
+        fetch('https://disease.sh/v3/covid-19/all').then(
+            response => {
+                return response.json()
+            }).then((jsonParsed) => {
+                setStatus({
+                    'casosHoje': jsonParsed.todayCases,
+                    'mortesHoje': jsonParsed.todayDeaths,
+                    'recuperadosHoje': jsonParsed.todayRecovered,
+                    'mortesTotal': jsonParsed.deaths,
+                    'recuperadosTotal': jsonParsed.recovered,
+                    'casosTotal': jsonParsed.cases
+                })
             })
-        }
-    )
+    }, [])
 
     function divInfo(info, p){
         return(
             <div className = 'card'>
-                <p>{info}</p>
+                <label>{info}</label>
                 <p>{p}</p>
             </div>
         )
@@ -38,15 +40,23 @@ function Geral(){
 
     return (
         <>
-            <h2>Estatísticas Gerais COVID-19</h2>
+            <h2>Estatísticas Mundiais COVID-19</h2>
             
             <div className = 'ContainerCards'>
                 <div className = 'containerHoje'>
-                    {divInfo(status['casosHoje'], 'Casos Covid-19 Hoje')}
+                    {divInfo(status.casosHoje, 'Casos Hoje')}
+                    {divInfo(status.mortesHoje, 'Mortes Hoje')}
+                    {divInfo(status.recuperadosHoje, 'Recuperados Hoje')}
+
                 </div>
 
+                <hr />
+
                 <div className = 'containerTotal'>
-                    {divInfo}
+                    {divInfo(status.casosTotal, 'Casos')}
+                    {divInfo(status.mortesTotal, 'Mortes')}
+                    {divInfo(status.recuperadosTotal, 'Recuperados')}
+
                 </div>
             </div>
         </>

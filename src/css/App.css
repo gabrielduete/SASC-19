@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
 
+body{
+    background-color: #f7fdff;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -10,8 +14,9 @@
 .leaflet-container {
     width: 400px; 
     height: 550px;
-    border-radius: 20px;
+    border-radius: 8px;
     margin-left: 5%;
+    box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.514);
 }
 
 .container {
@@ -32,7 +37,7 @@
     grid-area: meuCabecalho;
     margin-left: 2%;    
 }
-  
+
 .meuFooter { 
     grid-area: meuFooter;
 }
@@ -45,4 +50,7 @@
 .minhasEstatisticas { 
     grid-area: minhasEstatisticas; 
 }
-  
+
+.meuTema{
+    position: absolute;
+}
