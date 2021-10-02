@@ -1,39 +1,36 @@
-import React from 'react'
+import React from "react";
+import "./App.css";
 
-import ApiCovid from './componentes/ApiCovid'
-import Cabecalho from './componentes/Cabecalho'
-import Footer from './componentes/Footer'
-import Sgeral from './componentes/StatusGeral'
-import Botao from './componentes/BotaoTema'
+import MapContainer from "./components/MapContainer";
+import Button from "./components/Button";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Sgeral from "./components/StatusGeral";
 
-import './css/App.css'
+function App() {
+	return (
+		<div className="container">
+			<div className="meuCabecalho">
+				<Header />
+			</div>
 
-function App(){
-  return (
-    <div className = 'container'>
-      
-      <div className = "meuCabecalho">
-        <Cabecalho />
-      </div>
-      
-      <div className = "meuFooter">
-        <Footer />
-      </div>
-      
-      <div className = "meuMapa">
-        <ApiCovid />
-      </div>
-      
-      <div className = "minhasEstatisticas">
-        <Sgeral /> 
-      </div>
-      
-      <div className = 'meuTema'>
-        <Botao />
-      </div>
+			<div className="meuFooter">
+				<Footer />
+			</div>
 
-    </div>
-  )
+			<div className="meuMapa">
+				<MapContainer />
+			</div>
+
+			<div className="minhasEstatisticas">
+				<Sgeral />
+			</div>
+
+			<div className="meuTema">
+				<Button />
+			</div>
+		</div>
+	);
 }
 
-export default App
+export default App;
