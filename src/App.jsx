@@ -9,27 +9,27 @@ import Sgeral from "./components/StatusGeral";
 
 function App() {
 	return (
-		<div className="container">
-			<div className="meuCabecalho">
+		<section className="container">
+			<header className="meuCabecalho">
 				<Header />
-			</div>
+			</header>
 
-			<div className="meuFooter">
+			<footer className="meuFooter">
 				<Footer />
-			</div>
+			</footer>
 
-			<div className="meuMapa">
+			<nav className="meuMapa">
 				<MapContainer />
-			</div>
+			</nav>
 
-			<div className="minhasEstatisticas">
+			<aside className="minhasEstatisticas">
 				<Sgeral />
-			</div>
+			</aside>
 
 			<div className="meuTema">
 				<Button />
 			</div>
-		</div>
+		</section>
 	);
 }
 
