@@ -39,7 +39,9 @@ body {
 }
 
 .meuFooter {
+	margin-top: 3%;
 	grid-area: meuFooter;
+	font-size: 0.65em;
 }
 
 .meuMapa {

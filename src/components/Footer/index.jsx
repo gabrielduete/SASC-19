@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
 	return (
 		<>
-			<h2>a</h2>
+			<h2>SASC-19 - Todos os Direitos Reservados</h2>
 		</>
 	);
 }
