@@ -1,4 +1,4 @@
-<h1>Aplicação que mostra um mapa interagível com as estatísticas referente ao COVID-19 de cada país da América do Sul, e estatísticas globais do COVID-19(Ainda em desenvolvimento)</h1>
+<h1>SASC-19 é uma aplicação em React que mostra um mapa com as estatísticas em tempo real referente ao COVID-19 de cada país da América do Sul, e também estatísticas globais do COVID-19.</h1>
 
 # Getting Started with Create React App
 
