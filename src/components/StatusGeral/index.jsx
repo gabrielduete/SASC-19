@@ -5,7 +5,7 @@ import "./styles.css";
 const divInfo = (info, p) => {
 	return (
 		<div className="card">
-			<label>{info}</label>
+			<label>{typeof info === 'number' ? (info).toLocaleString('pt-BR') : info}</label>
 			<p>{p}</p>
 		</div>
 	);
