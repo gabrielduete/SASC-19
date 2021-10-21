@@ -20,7 +20,7 @@ body {
 	box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.514);
 }
 
-.container {
+.container, .darkContainer {
 	height: 100vh;
 	display: grid;
 	grid-template-columns: 1.4fr 1.7fr 1fr;
@@ -33,6 +33,10 @@ body {
 		"meuMapa minhasEstatisticas minhasEstatisticas"
 		"meuMapa minhasEstatisticas minhasEstatisticas"
 		"meuFooter meuFooter meuFooter";
+}
+
+.darkContainer {
+	background-color: #24203a;
 }
 
 .meuCabecalho {

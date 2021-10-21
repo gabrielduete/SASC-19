@@ -7,3 +7,12 @@ h1{
     color: #7d76a7;
     font-size: 0.80em;
 }
+
+.topContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding-right: 5%;
+}
