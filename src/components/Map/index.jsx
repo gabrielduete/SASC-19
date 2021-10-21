@@ -1,12 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 function Map(props) {
 	const [teste, setTeste] = useState(0);
+	const [theme,setTheme] = useState('');
+	const [map, setMap] = useState(null);
+
+	const L = require("leaflet");
+
+	const mapa1 = L.tileLayer("https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png")
+  const mapa2 = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")
+
 
 	setTimeout(() => {
 		setTeste(teste + 1);
 	}, 1000);
+
+	useEffect(() => {
+		if(map){
+		if(props.theme){
+			setTheme('dark');
+			mapa2.removeFrom(map);
+      mapa1.addTo(map);
+
+		}else{
+			setTheme('light');
+			mapa1.removeFrom(map);
+      mapa2.addTo(map);
+		}
+	}
+	}, [props.theme]);
 
 	const paises = {
 		"Argentina": [-40, -67, props.arrayCasos[0], props.arrayMortes[0], props.arrayMortesHoje[0], props.arrayRecuperados[0], props.arrayRecuperadosHoje[0]],
@@ -47,16 +70,18 @@ function Map(props) {
 		);
 	}
 
+
 	return (
 		<>
 			<MapContainer
 				center={[-23.6551563, -60.0]}
 				zoom={3}
 				scrollWheelZoom={false}
+				whenCreated={setMap}
 			>
 				<TileLayer
 					attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 				/>
 
 				{mostrarMarcador("Argentina")}
@@ -74,6 +99,7 @@ function Map(props) {
 				{mostrarMarcador("Uruguay")}
 				{mostrarMarcador("Venezuela")}
 			</MapContainer>
+
 		</>
 	);
 }
