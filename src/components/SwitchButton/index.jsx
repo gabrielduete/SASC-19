@@ -1,7 +1,6 @@
 import React from "react";
 
 import './style.css';
-import '../../static/images/sun.png'
 
 
 function SwitchButton(props) {
