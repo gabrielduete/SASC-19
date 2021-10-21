@@ -2,6 +2,7 @@
 
 body {
 	background-color: #f7fdff;
+	height: 100%;
 }
 
 * {
@@ -20,6 +21,7 @@ body {
 }
 
 .container {
+	height: 100vh;
 	display: grid;
 	grid-template-columns: 1.4fr 1.7fr 1fr;
 	grid-template-rows: 0.7fr 2fr 1.9fr 1.4fr 0.5fr;
