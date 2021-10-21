@@ -39,7 +39,7 @@
     border-radius: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.4s;
-    background-image: url('../../assets/images/sun.png');
+    background-image: url('../../assets/images/moon.png');
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
@@ -50,5 +50,5 @@
 }
 .switch--shadow:checked + label:after {
     transform: translateX(40px);
-    background-image: url('../../assets/images/moon.png');
+    background-image: url('../../assets/images/sun.png');
 }
