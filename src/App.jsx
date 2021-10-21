@@ -11,7 +11,7 @@ function App() {
 	const [darkTheme, setDarkTheme] = useState(false);
 
 	function handleDarkTheme() {
-		setDarkTheme(!darkTheme); 
+		setDarkTheme(!darkTheme);
 	}
 
 	return (
@@ -25,7 +25,7 @@ function App() {
 			</footer>
 
 			<nav className="meuMapa">
-				<MapContainer />
+				<MapContainer theme={darkTheme}/>
 			</nav>
 
 			<aside className="minhasEstatisticas">

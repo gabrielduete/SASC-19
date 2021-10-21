@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { getCovidStatusCountries } from "../../api/api-covid";
 import Map from "../Map";
 
-function ApiCovid() {
+function ApiCovid(props) {
 	const [arrayCasos, setArrayCasos] = useState([]);
 	const [arrayMortes, setArrayMortes] = useState([]);
 	const [arrayMortesHoje, setArrayMortesHoje] = useState([]);
@@ -30,6 +30,7 @@ function ApiCovid() {
 			arrayMortesHoje={arrayMortesHoje}
 			arrayRecuperados={arrayRecuperados}
 			arrayRecuperadosHoje={arrayRecuperadosHoje}
+			theme={props.theme}
 		/>
 	);
 }
