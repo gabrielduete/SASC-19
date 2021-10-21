@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 import MapContainer from "./components/MapContainer";
@@ -8,10 +8,16 @@ import Header from "./components/Header";
 import Sgeral from "./components/StatusGeral";
 
 function App() {
+	const [darkTheme, setDarkTheme] = useState(false);
+
+	function handleDarkTheme() {
+		setDarkTheme(!darkTheme); 
+	}
+
 	return (
-		<section className="container">
+		<section className={ darkTheme === true ? 'darkContainer': 'container' }>
 			<header className="meuCabecalho">
-				<Header />
+				<Header switchTheme={handleDarkTheme} />
 			</header>
 
 			<footer className="meuFooter">
